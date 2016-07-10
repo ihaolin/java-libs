@@ -1,0 +1,16 @@
+
+
+message Message {
+
+    // ID（必需）
+    required int32 id = 1;
+
+    // 发送者
+    required string sender = 2;
+
+    // 接收者
+    required string receiver = 3;
+
+    // 内容
+    required string content = 4;
+}
