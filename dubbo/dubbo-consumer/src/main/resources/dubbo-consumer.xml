@@ -17,7 +17,7 @@
 	<!-- 生成远程服务代理，可以和本地bean一样使用demoService 
 		stub: 打开存根，消费端保存一些缓存数据，业务逻辑, 如参数验证
 	-->
-	<dubbo:reference id="demoService" interface="service.DemoService"/>
+	<dubbo:reference id="demoService" interface="service.DemoService" version="1.0.0" />
 	
 	<!-- 扫描包 -->
 	<dubbo:annotation package="controller" />
