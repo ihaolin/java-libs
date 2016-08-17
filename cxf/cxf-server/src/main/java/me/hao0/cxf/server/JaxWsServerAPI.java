@@ -1,6 +1,6 @@
 package me.hao0.cxf.server;
 
-import org.haol.learn.cxf.service.impl.UserServiceImpl;
+import me.hao0.cxf.service.impl.UserServiceImpl;
 
 import javax.xml.ws.Endpoint;
 

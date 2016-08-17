@@ -1,7 +1,7 @@
 package me.hao0.cxf.server;
 
 import org.apache.cxf.frontend.ServerFactoryBean;
-import org.haol.learn.cxf.service.impl.UserServiceImpl;
+import me.hao0.cxf.service.impl.UserServiceImpl;
 
 /**
  * 基于cxf frontend的服务端:

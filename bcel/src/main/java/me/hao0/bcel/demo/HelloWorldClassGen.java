@@ -1,7 +1,6 @@
 package me.hao0.bcel.demo;
 
 
-import static com.sun.tools.classfile.AccessFlags.*;
 import org.apache.bcel.Constants;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.generic.*;
@@ -35,12 +34,12 @@ public class HelloWorldClassGen {
 
     public static void main(String[] args) throws IOException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         ClassGen hellWorldClazz = new ClassGen("HelloWorld", "java.lang.Object",
-                "<generated>", ACC_PUBLIC | ACC_SUPER,
+                "<generated>", 1 | 32,
                 null);
         ConstantPoolGen constantPoolGen = hellWorldClazz.getConstantPool(); // cg creates constant pool
         InstructionList instructions = new InstructionList();
 
-        MethodGen helloMethod = new MethodGen(ACC_PUBLIC, // access flags
+        MethodGen helloMethod = new MethodGen(1, // access flags
                 Type.VOID,                               // return type
                 new Type[] { Type.STRING },              // arg types
                 new String[] { "str" },                  // arg names
@@ -141,7 +140,7 @@ public class HelloWorldClassGen {
         helloMethod.setMaxStack();
         hellWorldClazz.addMethod(helloMethod.getMethod());
         instructions.dispose(); // Allow instruction handles to be reused
-        hellWorldClazz.addEmptyConstructor(ACC_PUBLIC);
+        hellWorldClazz.addEmptyConstructor(1);
 
         JavaClass klass = hellWorldClazz.getJavaClass();
 

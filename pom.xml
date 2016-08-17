@@ -216,6 +216,7 @@
         <module>protobuf</module>
         <module>zkclient</module>
         <module>quartz</module>
+        <module>jedis</module>
     </modules>
 
 </project>

@@ -1,6 +1,6 @@
 package me.hao0.cxf.server;
 
-import org.haol.learn.cxf.providers.UserServiceDOMProvider;
+import me.hao0.cxf.providers.UserServiceDOMProvider;
 
 import javax.xml.ws.Endpoint;
 

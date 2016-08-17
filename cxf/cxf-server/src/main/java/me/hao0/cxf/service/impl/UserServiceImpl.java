@@ -1,7 +1,7 @@
 package me.hao0.cxf.service.impl;
 
-import org.haol.learn.cxf.model.User;
-import org.haol.learn.cxf.service.UserService;
+import me.hao0.cxf.model.User;
+import me.hao0.cxf.service.UserService;
 
 import javax.jws.WebService;
 import java.util.*;

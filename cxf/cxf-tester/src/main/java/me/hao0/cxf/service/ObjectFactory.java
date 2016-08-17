@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the org.haol.learn.cxf.service package. 
+ * generated in the me.hao0.cxf.service package.
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -33,7 +33,7 @@ public class ObjectFactory {
     private final static QName _ListResponse_QNAME = new QName("http://service.cxf.learn.haol.org/", "listResponse");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.haol.learn.cxf.service
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: me.hao0.cxf.service
      * 
      */
     public ObjectFactory() {

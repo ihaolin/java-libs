@@ -3,9 +3,6 @@ package me.hao0.bcel.aop;
 import org.apache.bcel.Constants;
 import org.apache.bcel.generic.*;
 import java.lang.reflect.Method;
-import static com.sun.tools.classfile.AccessFlags.ACC_PRIVATE;
-import static com.sun.tools.classfile.AccessFlags.ACC_PUBLIC;
-import static com.sun.tools.classfile.AccessFlags.ACC_SUPER;
 
 /**
  * Author: haolin
@@ -23,12 +20,12 @@ public abstract class ProxyClass {
         Class proxyedClass = proxyed.getClass();
         String proxyClassName = proxyedClass.getSimpleName()+ "Proxy";
         ClassGen proxyClassGen = new ClassGen(proxyClassName, proxyedClass.getName(),
-                "<generated>", ACC_PUBLIC | ACC_SUPER,
+                "<generated>", 1 | 32,
                 null);
         // add interceptor field
-        addField(proxyClassGen, ACC_PRIVATE, "interceptor", interceptor.getClass());
+        addField(proxyClassGen, 2, "interceptor", interceptor.getClass());
         // add target object field
-        addField(proxyClassGen, ACC_PRIVATE, "proxyed", proxyed.getClass());
+        addField(proxyClassGen, 2, "proxyed", proxyed.getClass());
 
         Method[] methods = proxyed.getClass().getMethods();
         for (Method method : methods){
