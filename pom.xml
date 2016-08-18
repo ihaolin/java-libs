@@ -195,6 +195,7 @@
         <module>zkclient</module>
         <module>quartz</module>
         <module>jedis</module>
+        <module>json</module>
     </modules>
 
 </project>
