@@ -14,10 +14,14 @@
 	<!-- 使用multicast广播注册中心暴露发现服务地址 -->
 	<dubbo:registry address="zookeeper://localhost:2181" />
 
+	<dubbo:protocol name="dubbo" serialization="hessian2"/>
+
 	<!-- 生成远程服务代理，可以和本地bean一样使用demoService 
 		stub: 打开存根，消费端保存一些缓存数据，业务逻辑, 如参数验证
 	-->
 	<dubbo:reference id="demoService" interface="service.DemoService" version="1.0.0" />
+
+	<dubbo:reference id="userService" interface="service.UserService" />
 	
 	<!-- 扫描包 -->
 	<dubbo:annotation package="controller" />

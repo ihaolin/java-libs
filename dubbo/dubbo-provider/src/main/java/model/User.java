@@ -16,6 +16,8 @@ public class User implements Serializable{
 	@NotNull(message="name can't be null")
 	private String name;
 
+	private Integer sex;
+
 	public Integer getId() {
 		return id;
 	}
@@ -46,5 +48,24 @@ public class User implements Serializable{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Integer getSex() {
+		return sex;
+	}
+
+	public void setSex(Integer sex) {
+		this.sex = sex;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", name='" + name + '\'' +
+				", sex=" + sex +
+				'}';
 	}
 }

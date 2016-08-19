@@ -8,7 +8,7 @@ import service.UserService;
 /**
  * dubbo服务实现
  */
-@Service(version="1.0.0",retries=2, validation="true")
+@Service(retries = 2)
 public class UserServiceImpl implements UserService {
 
 	public void login(String user, String pass) {
@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void create(User user) {
-		System.out.println("create user successfully.");
+		System.out.println("create user successfully: " + user);
 		// 获取消费端设置的隐式参数
 		System.out.println(RpcContext.getContext().getAttachment("COOKIE"));
 	}

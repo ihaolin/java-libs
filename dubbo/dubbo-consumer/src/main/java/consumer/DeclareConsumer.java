@@ -1,7 +1,9 @@
 package consumer;
 
+import model.User;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import service.DemoService;
+import service.UserService;
 
 public class DeclareConsumer {
 	public static void main(String[] args) {
@@ -18,5 +20,14 @@ public class DeclareConsumer {
 		//UserController userController = (UserController)context.getBean("userController");
 		
 		//userController.login("haolin", "111111");
+
+		UserService userService = (UserService)context.getBean("userService");
+
+		User user = new User();
+		user.setId(1);
+		user.setName("haolin");
+		user.setPassword("123456");
+		user.setUsername("haolin");
+		userService.create(user);
 	}
 }

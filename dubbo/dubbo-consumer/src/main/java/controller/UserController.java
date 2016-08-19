@@ -10,7 +10,7 @@ import service.UserService;
 @Component
 public class UserController {
 	
-	@Reference(version="1.0.0")
+	@Reference
 	private UserService userService;
 	
 	public void login(String user, String pass){
