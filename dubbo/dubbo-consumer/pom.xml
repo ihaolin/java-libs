@@ -16,5 +16,12 @@
     <packaging>jar</packaging>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>me.hao0</groupId>
+            <artifactId>dubbo-service</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

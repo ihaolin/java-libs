@@ -13,11 +13,12 @@
 
 	<dubbo:protocol name="dubbo" port="20880" serialization="hessian2"/>
 
-	<dubbo:service interface="service.DemoService" ref="demoService" version="1.0.0" />
+	<dubbo:service interface="me.hao0.dubbo.service.DemoService" ref="demoService" version="1.0.0" />
 	
 	<!-- 和本地bean一样实现服务 -->
-	<bean id="demoService" class="service.impl.DemoServiceImpl"/>
-	
-	<dubbo:annotation package="service.impl" />
+	<bean id="demoService" class="me.hao0.service.DemoServiceImpl"/>
+
+	<!-- 通过注解配置Dubbo服务 -->
+	<dubbo:annotation package="me.hao0.service" />
 
 </beans>

@@ -196,6 +196,7 @@
         <module>quartz</module>
         <module>jedis</module>
         <module>json</module>
+        <module>zipkin</module>
     </modules>
 
 </project>
