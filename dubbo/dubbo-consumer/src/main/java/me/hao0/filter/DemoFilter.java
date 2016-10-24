@@ -1,6 +1,7 @@
 package me.hao0.filter;
 
 import com.alibaba.dubbo.rpc.*;
+import me.hao0.context.DemoContext;
 
 /**
  * Author: haolin
@@ -10,6 +11,8 @@ public class DemoFilter implements Filter {
 
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
+
+        System.out.println("demo context: " + DemoContext.get());
 
         System.out.println("interface: " + invoker.getInterface());
 

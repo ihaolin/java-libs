@@ -1,5 +1,6 @@
 package me.hao0.consumer;
 
+import me.hao0.context.DemoContext;
 import me.hao0.dubbo.model.User;
 import me.hao0.dubbo.service.DemoService;
 import me.hao0.dubbo.service.UserService;
@@ -17,7 +18,11 @@ public class DeclareConsumer {
 
         // return result
 		System.out.println(hello);
-		
+
+
+		// SET some thread local context
+		DemoContext.set("You're shine.");
+
 		UserService userService = (UserService)context.getBean("userService");
 
 		User user = new User();
