@@ -240,7 +240,7 @@ public class CuratorMasterLatch implements Closeable, LeaderLatchListener {
                          */
                         assignTasks(event.getChildren());
                     } else {
-                        LOG.warn("Unexpected event: " + event.getPath());
+                        LOG.warn("Unexpected demo: " + event.getPath());
                     }
                 
                     break;
@@ -278,7 +278,7 @@ public class CuratorMasterLatch implements Closeable, LeaderLatchListener {
                     LOG.error("Default case: " + event.getType());
                 }
             } catch (Exception e) {
-                LOG.error("Exception while processing event.", e);
+                LOG.error("Exception while processing demo.", e);
                 try{
                     close();
                 } catch (IOException ioe) {

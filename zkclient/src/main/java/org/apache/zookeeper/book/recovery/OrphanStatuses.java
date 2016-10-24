@@ -122,7 +122,7 @@ public class OrphanStatuses {
     public static void main(String args[]) throws Exception {
         ZooKeeper zk = new ZooKeeper("localhost:" + args[0], 10000, new Watcher() {
             public void process(WatchedEvent event) {
-                LOG.info( "Received event: " + event.getType() );
+                LOG.info( "Received demo: " + event.getType() );
             }
         });
         

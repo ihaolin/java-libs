@@ -197,6 +197,7 @@
         <module>jedis</module>
         <module>json</module>
         <module>zipkin</module>
+        <module>disruptor</module>
     </modules>
 
 </project>

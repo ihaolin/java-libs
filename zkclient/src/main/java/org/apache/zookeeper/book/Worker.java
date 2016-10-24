@@ -89,7 +89,7 @@ public class Worker implements Watcher, Closeable {
      * Deals with session events like connecting
      * and disconnecting.
      * 
-     * @param e new event generated
+     * @param e new demo generated
      */
     public void process(WatchedEvent e) { 
         LOG.info(e.toString() + ", " + hostPort);
@@ -152,7 +152,7 @@ public class Worker implements Watcher, Closeable {
                 /*
                  * Try again. Note that registering again is not a problem.
                  * If the znode has already been created, then we get a 
-                 * NODEEXISTS event back.
+                 * NODEEXISTS demo back.
                  */
                 createAssignNode();
                 break;
@@ -190,7 +190,7 @@ public class Worker implements Watcher, Closeable {
                 /*
                  * Try again. Note that registering again is not a problem.
                  * If the znode has already been created, then we get a 
-                 * NODEEXISTS event back.
+                 * NODEEXISTS demo back.
                  */
                 register();
                 

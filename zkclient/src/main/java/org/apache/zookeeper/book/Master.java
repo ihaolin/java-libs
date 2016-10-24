@@ -147,10 +147,10 @@ public class Master implements Watcher, Closeable {
      * Watcher interface. We use it to deal with the
      * different states of a session. 
      * 
-     * @param e new session event to be processed
+     * @param e new session demo to be processed
      */
     public void process(WatchedEvent e) {  
-        LOG.info("Processing event: " + e.toString());
+        LOG.info("Processing demo: " + e.toString());
         if(e.getType() == EventType.None){
             switch (e.getState()) {
             case SyncConnected:
@@ -198,7 +198,7 @@ public class Master implements Watcher, Closeable {
                 /*
                  * Try again. Note that registering again is not a problem.
                  * If the znode has already been created, then we get a 
-                 * NODEEXISTS event back.
+                 * NODEEXISTS demo back.
                  */
                 createParent(path, (byte[]) ctx);
                 
@@ -251,7 +251,7 @@ public class Master implements Watcher, Closeable {
      * great, it takes leadership. However, there are a couple of
      * exceptional situations we need to take care of. 
      * 
-     * First, we could get a connection loss event before getting
+     * First, we could get a connection loss demo before getting
      * an answer so we are left wondering if the operation went through.
      * To check, we try to read the /master znode. If it is there, then
      * we check if this master is the primary. If not, we run for master
@@ -346,7 +346,7 @@ public class Master implements Watcher, Closeable {
      * Run for master. To run for master, we try to create the /master znode,
      * with masteCreateCallback being the callback implementation. 
      * In the case the create call succeeds, the client becomes the master.
-     * If it receives a CONNECTIONLOSS event, then it needs to check if the 
+     * If it receives a CONNECTIONLOSS demo, then it needs to check if the
      * znode has been created. In the case the znode exists, it needs to check
      * which server is the master.
      */
