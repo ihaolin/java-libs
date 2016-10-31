@@ -198,6 +198,8 @@
         <module>json</module>
         <module>zipkin</module>
         <module>disruptor</module>
+        <module>es</module>
+        <module>jmh</module>
     </modules>
 
 </project>
