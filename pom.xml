@@ -200,6 +200,7 @@
         <module>disruptor</module>
         <module>es</module>
         <module>jmh</module>
+        <module>storm</module>
     </modules>
 
 </project>
