@@ -201,6 +201,7 @@
         <module>es</module>
         <module>jmh</module>
         <module>storm</module>
+        <module>thrift</module>
     </modules>
 
 </project>
